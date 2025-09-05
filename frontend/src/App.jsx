@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// frontend/src/App.jsx
+
+import React from 'react';
+import './App.css'; // Importa nosso arquivo de estilos CSS
+import logoMppe from './assets/images/logo_mppe.png'; // Importa a imagem do logo
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  // A função retorna o código JSX (que parece HTML) que será exibido na tela
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    // Note que no JSX usamos "className" em vez de "class" para o CSS
+    <div className="container-homepage">
+      
+      <header className="header-homepage">
+        <img src={logoMppe} alt="Logo Ministério Público de Pernambuco" />
+        <p>Ministério Público de Pernambuco</p>
+      </header>
+
+      <main className="main-content">
+        <h1>SEJA BEM VINDO AO SITE DO DEMPAM!</h1>
+        
+        <div className="button-group">
+          {/* Por enquanto, os links não levam a lugar nenhum */}
+          <a href="#" className="btn btn-solicitante">SOLICITANTE</a>
+          <a href="#" className="btn btn-admin">ADMINISTRATIVO</a>
+        </div>
+      </main>
+      
+    </div>
+  );
 }
 
-export default App
+export default App;
